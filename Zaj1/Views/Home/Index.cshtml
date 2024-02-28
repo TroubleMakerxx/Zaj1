@@ -1,0 +1,26 @@
+﻿@using System.Collections
+@{
+    ViewData["Title"] = "Home Page";
+    IList tab = new List<string> { "a", "b", "c" };
+
+}
+
+@{
+foreach (var item in tab)
+    {
+        if (@item == "b")
+        {
+            <p class="display-4" style="color: red">@item</p>
+        }
+        else
+        {
+            <p class="display-4">@item</p>
+        }
+
+    }
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
