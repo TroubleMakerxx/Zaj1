@@ -1,0 +1,7 @@
+﻿@model IEnumerable<Kategoria>
+@{
+    foreach (var kategoria in Model)
+    {
+                <a style="color:white" href="@Url.Action("Lista","Filmy",new{nazwaKategorii = kategoria.Nazwa})">@kategoria.Nazwa</a>
+    }
+}

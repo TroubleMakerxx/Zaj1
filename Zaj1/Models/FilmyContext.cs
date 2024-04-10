@@ -2,14 +2,14 @@
 
 namespace Zaj1.Models
 {
-    public class FilmyConetext: DbContext
+    public class FilmyContext: DbContext
     {
-        public FilmyConetext(DbContextOptions options) : base(options)
+        public FilmyContext(DbContextOptions options) : base(options)
         {
         }
 
-        DbSet<film> Filmy { get; set; }
-        DbSet<Kategoria> Kategorie { get; set; }
+        public DbSet<film> Filmy { get; set; }
+        public DbSet<Kategoria> Kategorie { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

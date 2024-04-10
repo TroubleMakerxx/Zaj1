@@ -10,7 +10,7 @@ using Zaj1.Models;
 
 namespace Zaj1.Migrations
 {
-    [DbContext(typeof(FilmyConetext))]
+    [DbContext(typeof(FilmyContext))]
     partial class FilmyConetextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

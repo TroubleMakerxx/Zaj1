@@ -7,26 +7,27 @@ namespace Zaj1.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        FilmyContext db;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(FilmyContext db)
         {
-            _logger = logger;
+            this.db = db;
+        }
+
+        public IActionResult StronyStatyczne(string nazwa)
+        {
+            return View(nazwa);
         }
 
         public IActionResult Index()
         {
-            return View();
+            var kategorie = db.Kategorie.ToList();
+            return View(kategorie);
         }
 
         public IActionResult Privacy()
         {
             return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }

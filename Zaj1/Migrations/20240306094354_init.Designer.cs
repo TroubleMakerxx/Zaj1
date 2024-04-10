@@ -11,7 +11,7 @@ using Zaj1.Models;
 
 namespace Zaj1.Migrations
 {
-    [DbContext(typeof(FilmyConetext))]
+    [DbContext(typeof(FilmyContext))]
     [Migration("20240306094354_init")]
     partial class init
     {
