@@ -13,6 +13,8 @@ namespace Zaj1.Models
         public string? Cena { get; set; }
         public DateTime DataDodania { get; set; }
 
+        public string PlakatUrl { get; set; }
+
         public int KategoriaId { get; set; }
         public Kategoria Kategoria { get; set; }
     }

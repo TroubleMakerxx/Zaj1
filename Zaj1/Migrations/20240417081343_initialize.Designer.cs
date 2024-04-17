@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Zaj1.Models;
 
@@ -11,9 +12,10 @@ using Zaj1.Models;
 namespace Zaj1.Migrations
 {
     [DbContext(typeof(FilmyContext))]
-    partial class FilmyConetextModelSnapshot : ModelSnapshot
+    [Migration("20240417081343_initialize")]
+    partial class initialize
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -67,10 +69,10 @@ namespace Zaj1.Migrations
                         {
                             Id = 1,
                             Cena = "25zł",
-                            DataDodania = new DateTime(2024, 4, 17, 10, 31, 46, 833, DateTimeKind.Local).AddTicks(1760),
+                            DataDodania = new DateTime(2024, 4, 17, 10, 13, 43, 531, DateTimeKind.Local).AddTicks(8392),
                             KategoriaId = 2,
                             Opis = "Thriller science fiction o kradzieży danych umysłu",
-                            PlakatUrl = "MagicHeal.jpg",
+                            PlakatUrl = "Zaj1/Views/Filmy/Grafiki/MagicHeal",
                             Rezyser = "Christopher Nolan",
                             Tytul = "Incepcja"
                         },
@@ -78,10 +80,10 @@ namespace Zaj1.Migrations
                         {
                             Id = 2,
                             Cena = "22zł",
-                            DataDodania = new DateTime(2024, 4, 17, 10, 31, 46, 833, DateTimeKind.Local).AddTicks(1801),
+                            DataDodania = new DateTime(2024, 4, 17, 10, 13, 43, 531, DateTimeKind.Local).AddTicks(8436),
                             KategoriaId = 2,
                             Opis = "Film akcji o walce ludzi przeciwko maszynom",
-                            PlakatUrl = "Solo.png",
+                            PlakatUrl = "Zaj1/Views/Filmy/Grafiki/Solo",
                             Rezyser = "Lana Wachowski, Lilly Wachowski",
                             Tytul = "Matrix"
                         },
@@ -89,10 +91,10 @@ namespace Zaj1.Migrations
                         {
                             Id = 3,
                             Cena = "18zł",
-                            DataDodania = new DateTime(2024, 4, 17, 10, 31, 46, 833, DateTimeKind.Local).AddTicks(1804),
+                            DataDodania = new DateTime(2024, 4, 17, 10, 13, 43, 531, DateTimeKind.Local).AddTicks(8439),
                             KategoriaId = 3,
                             Opis = "Dramat więzienny oparty na noweli Stephena Kinga",
-                            PlakatUrl = "Shrek.jpg",
+                            PlakatUrl = "Zaj1/Views/Filmy/Grafiki/Shrek",
                             Rezyser = "Frank Darabont",
                             Tytul = "Shawshank Redemption"
                         },
@@ -100,10 +102,10 @@ namespace Zaj1.Migrations
                         {
                             Id = 4,
                             Cena = "23zł",
-                            DataDodania = new DateTime(2024, 4, 17, 10, 31, 46, 833, DateTimeKind.Local).AddTicks(1807),
+                            DataDodania = new DateTime(2024, 4, 17, 10, 13, 43, 531, DateTimeKind.Local).AddTicks(8442),
                             KategoriaId = 3,
                             Opis = "Western o niewolnictwie i zemście",
-                            PlakatUrl = "Exorcisto.jpg",
+                            PlakatUrl = "Zaj1/Views/Filmy/Grafiki/Exorcisto",
                             Rezyser = "Quentin Tarantino",
                             Tytul = "Django Unchained"
                         },
@@ -111,10 +113,10 @@ namespace Zaj1.Migrations
                         {
                             Id = 5,
                             Cena = "28zł",
-                            DataDodania = new DateTime(2024, 4, 17, 10, 31, 46, 833, DateTimeKind.Local).AddTicks(1810),
+                            DataDodania = new DateTime(2024, 4, 17, 10, 13, 43, 531, DateTimeKind.Local).AddTicks(8445),
                             KategoriaId = 2,
                             Opis = "Epicki film science fiction o podróży międzygwiezdnej",
-                            PlakatUrl = "Harry.jpg",
+                            PlakatUrl = "Zaj1/Views/Filmy/Grafiki/Harry",
                             Rezyser = "Christopher Nolan",
                             Tytul = "Interstellar"
                         });

@@ -1,0 +1,15 @@
+﻿@model DodawanieFilmow
+@{
+
+}
+
+@using (Html.BeginForm("DodajFilm", "film", FormMethod.Post))
+{
+    @Html.TextBoxFor(f => f.film.Tytul)
+    @Html.TextBoxFor(f => f.film.Rezyser)
+    @Html.TextBoxFor(f => f.film.Opis)
+    @Html.TextBoxFor(f => f.film.PlakatUrl)
+    @Html.TextBoxFor(f => f.film.DataDodania)
+    <input type="submit" value="Dodaj" />
+
+}

@@ -23,11 +23,11 @@ namespace Zaj1.Models
             );
 
             modelBuilder.Entity<film>().HasData(
-                new film() { Id = 1, Tytul = "Incepcja", Rezyser = "Christopher Nolan", Opis = "Thriller science fiction o kradzieży danych umysłu", Cena = "25zł", DataDodania = DateTime.Now, KategoriaId = 2 },
-                new film() { Id = 2, Tytul = "Matrix", Rezyser = "Lana Wachowski, Lilly Wachowski", Opis = "Film akcji o walce ludzi przeciwko maszynom", Cena = "22zł", DataDodania = DateTime.Now, KategoriaId = 2 },
-                new film() { Id = 3, Tytul = "Shawshank Redemption", Rezyser = "Frank Darabont", Opis = "Dramat więzienny oparty na noweli Stephena Kinga", Cena = "18zł", DataDodania = DateTime.Now, KategoriaId = 3 },
-                new film() { Id = 4, Tytul = "Django Unchained", Rezyser = "Quentin Tarantino", Opis = "Western o niewolnictwie i zemście", Cena = "23zł", DataDodania = DateTime.Now, KategoriaId = 3 },
-                new film() { Id = 5, Tytul = "Interstellar", Rezyser = "Christopher Nolan", Opis = "Epicki film science fiction o podróży międzygwiezdnej", Cena = "28zł", DataDodania = DateTime.Now, KategoriaId = 2 }
+                new film() { Id = 1, Tytul = "Incepcja", Rezyser = "Christopher Nolan", Opis = "Thriller science fiction o kradzieży danych umysłu", Cena = "25zł", DataDodania = DateTime.Now, KategoriaId = 2, PlakatUrl = "MagicHeal.jpg" },
+                new film() { Id = 2, Tytul = "Matrix", Rezyser = "Lana Wachowski, Lilly Wachowski", Opis = "Film akcji o walce ludzi przeciwko maszynom", Cena = "22zł", DataDodania = DateTime.Now, KategoriaId = 2, PlakatUrl = "Solo.png" },
+                new film() { Id = 3, Tytul = "Shawshank Redemption", Rezyser = "Frank Darabont", Opis = "Dramat więzienny oparty na noweli Stephena Kinga", Cena = "18zł", DataDodania = DateTime.Now, KategoriaId = 3, PlakatUrl = "Shrek.jpg" },
+                new film() { Id = 4, Tytul = "Django Unchained", Rezyser = "Quentin Tarantino", Opis = "Western o niewolnictwie i zemście", Cena = "23zł", DataDodania = DateTime.Now, KategoriaId = 3, PlakatUrl = "Exorcisto.jpg" },
+                new film() { Id = 5, Tytul = "Interstellar", Rezyser = "Christopher Nolan", Opis = "Epicki film science fiction o podróży międzygwiezdnej", Cena = "28zł", DataDodania = DateTime.Now, KategoriaId = 2, PlakatUrl = "Harry.jpg" }
             );
 
         }

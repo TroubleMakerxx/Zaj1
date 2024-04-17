@@ -43,5 +43,21 @@ namespace Zaj1.Controllers
             var film = db.Filmy.Find(idFilmu);
             return View(film);
         }
+
+        public IActionResult DodajFilm()
+        {
+            DodawanieFilmow dodaj = new DodawanieFilmow();
+
+            var kategorie = db.Kategorie.ToList();
+            dodaj.Kategorie = kategorie;
+            return View(dodaj);
+        }
+
+        public IActionResult DodajFilm(DodawanieFilmow obj)
+        {
+            obj.film.DataDodania = DateTime.Now;
+            db.Filmy.Add(obj.film);
+            return View("DodajFilm");
+        }
     }
 }

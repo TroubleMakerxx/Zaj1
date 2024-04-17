@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Zaj1.Models;
 
@@ -11,9 +12,10 @@ using Zaj1.Models;
 namespace Zaj1.Migrations
 {
     [DbContext(typeof(FilmyContext))]
-    partial class FilmyConetextModelSnapshot : ModelSnapshot
+    [Migration("20240417083147_initialization")]
+    partial class initialization
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
