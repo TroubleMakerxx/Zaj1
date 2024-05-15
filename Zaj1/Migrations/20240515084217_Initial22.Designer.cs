@@ -12,8 +12,8 @@ using Zaj1.Models;
 namespace Zaj1.Migrations
 {
     [DbContext(typeof(FilmyContext))]
-    [Migration("20240417083147_initialization")]
-    partial class initialization
+    [Migration("20240515084217_Initial22")]
+    partial class Initial22
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -32,8 +32,8 @@ namespace Zaj1.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<string>("Cena")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<decimal>("Cena")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<DateTime>("DataDodania")
                         .HasColumnType("datetime2");
@@ -68,8 +68,8 @@ namespace Zaj1.Migrations
                         new
                         {
                             Id = 1,
-                            Cena = "25zł",
-                            DataDodania = new DateTime(2024, 4, 17, 10, 31, 46, 833, DateTimeKind.Local).AddTicks(1760),
+                            Cena = 25m,
+                            DataDodania = new DateTime(2024, 5, 15, 10, 42, 17, 224, DateTimeKind.Local).AddTicks(8591),
                             KategoriaId = 2,
                             Opis = "Thriller science fiction o kradzieży danych umysłu",
                             PlakatUrl = "MagicHeal.jpg",
@@ -79,8 +79,8 @@ namespace Zaj1.Migrations
                         new
                         {
                             Id = 2,
-                            Cena = "22zł",
-                            DataDodania = new DateTime(2024, 4, 17, 10, 31, 46, 833, DateTimeKind.Local).AddTicks(1801),
+                            Cena = 22m,
+                            DataDodania = new DateTime(2024, 5, 15, 10, 42, 17, 224, DateTimeKind.Local).AddTicks(8626),
                             KategoriaId = 2,
                             Opis = "Film akcji o walce ludzi przeciwko maszynom",
                             PlakatUrl = "Solo.png",
@@ -90,8 +90,8 @@ namespace Zaj1.Migrations
                         new
                         {
                             Id = 3,
-                            Cena = "18zł",
-                            DataDodania = new DateTime(2024, 4, 17, 10, 31, 46, 833, DateTimeKind.Local).AddTicks(1804),
+                            Cena = 18m,
+                            DataDodania = new DateTime(2024, 5, 15, 10, 42, 17, 224, DateTimeKind.Local).AddTicks(8630),
                             KategoriaId = 3,
                             Opis = "Dramat więzienny oparty na noweli Stephena Kinga",
                             PlakatUrl = "Shrek.jpg",
@@ -101,8 +101,8 @@ namespace Zaj1.Migrations
                         new
                         {
                             Id = 4,
-                            Cena = "23zł",
-                            DataDodania = new DateTime(2024, 4, 17, 10, 31, 46, 833, DateTimeKind.Local).AddTicks(1807),
+                            Cena = 23m,
+                            DataDodania = new DateTime(2024, 5, 15, 10, 42, 17, 224, DateTimeKind.Local).AddTicks(8633),
                             KategoriaId = 3,
                             Opis = "Western o niewolnictwie i zemście",
                             PlakatUrl = "Exorcisto.jpg",
@@ -112,8 +112,8 @@ namespace Zaj1.Migrations
                         new
                         {
                             Id = 5,
-                            Cena = "28zł",
-                            DataDodania = new DateTime(2024, 4, 17, 10, 31, 46, 833, DateTimeKind.Local).AddTicks(1810),
+                            Cena = 28m,
+                            DataDodania = new DateTime(2024, 5, 15, 10, 42, 17, 224, DateTimeKind.Local).AddTicks(8636),
                             KategoriaId = 2,
                             Opis = "Epicki film science fiction o podróży międzygwiezdnej",
                             PlakatUrl = "Harry.jpg",

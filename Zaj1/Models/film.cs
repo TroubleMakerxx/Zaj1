@@ -10,7 +10,7 @@ namespace Zaj1.Models
         public string Rezyser { get; set; }
         [StringLength(500)]
         public string Opis { get; set; }
-        public string? Cena { get; set; }
+        public decimal Cena { get; set; }
         public DateTime DataDodania { get; set; }
 
         public string PlakatUrl { get; set; }

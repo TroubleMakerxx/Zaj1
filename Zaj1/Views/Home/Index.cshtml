@@ -4,6 +4,9 @@
     ViewData["Title"] = "Home Page";
 }
 
+<a class="btn btn-success" href="@Url.Action("DodajFilm","Filmy")">dodaj Film</a>
+<a class="btn btn-success" href="@Url.Action("Index","Koszyk")">Pokaż koszyk</a>
+
 <div class="text-center">
     @if (Model != null)
     {

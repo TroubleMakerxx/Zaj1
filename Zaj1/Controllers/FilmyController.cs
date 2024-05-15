@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -43,7 +44,7 @@ namespace Zaj1.Controllers
             var film = db.Filmy.Find(idFilmu);
             return View(film);
         }
-
+        [HttpGet]
         public IActionResult DodajFilm()
         {
             DodawanieFilmow dodaj = new DodawanieFilmow();
@@ -52,12 +53,16 @@ namespace Zaj1.Controllers
             dodaj.Kategorie = kategorie;
             return View(dodaj);
         }
-
+        [HttpPost]
         public IActionResult DodajFilm(DodawanieFilmow obj)
         {
-            obj.film.DataDodania = DateTime.Now;
-            db.Filmy.Add(obj.film);
-            return View("DodajFilm");
+
+                obj.film.DataDodania = DateTime.Now;
+                db.Filmy.Add(obj.film);
+                db.SaveChanges();
+
+                Console.WriteLine("Film dodany pomyślnie."); 
+            return RedirectToAction("DodajFilm");
         }
     }
 }

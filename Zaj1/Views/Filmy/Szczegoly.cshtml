@@ -8,5 +8,9 @@
         <p>@Model.Rezyser</p>
         <p>@Model.Opis</p>
         <p>@Model.DataDodania</p>
+        <form asp-controller="Koszyk" asp-action="Kup" method="post">
+            <input type="hidden" name="id" value="@Model.Id" />
+            <button type="submit">Dodaj do koszyka</button>
+        </form>
     </div>
 </div>

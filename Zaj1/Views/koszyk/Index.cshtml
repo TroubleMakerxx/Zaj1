@@ -1,0 +1,39 @@
+﻿@model IEnumerable<ElementKoszyka>
+@{
+}
+
+@if (Model != null)
+{
+        <div class="text-center">
+            <table class="table">
+                <tr>
+                    <th>Film</th>
+                    <th>Ilosc</th>
+                    <th>Wartosc</th>
+                </tr>
+
+
+            @foreach (var koszyk in Model)
+            {
+
+                        <tr>
+                            <td>@koszyk.Film.Tytul</td>
+                            <td>@koszyk.Ilosc</td>
+                            <td>@koszyk.Wartosc zł</td>
+                            <td>
+                                <form asp-controller="Koszyk" asp-action="Usun" method="post">
+                                    <input type="hidden" name="id" value="@koszyk.Film.Id" />
+                                    <button type="submit">Usuń</button>
+                                </form>
+                             </td>
+                        </tr>
+
+            }
+            </table>
+            suma: @ViewBag.CalaSuma
+        </div>
+}
+else
+{
+        <div>Koszyk jest pusty</div>
+}
