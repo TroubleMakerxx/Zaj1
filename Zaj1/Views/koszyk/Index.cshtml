@@ -2,38 +2,57 @@
 @{
 }
 
-@if (Model != null)
-{
-        <div class="text-center">
-            <table class="table">
+<table class="table">
+    @if (Model != null)
+    {
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Tytuł</th>
+                <th scope="col">Ilość</th>
+                <th scope="col">Wartość</th>
+                <th scope="col">Akcje</th>
+            </tr>
+        @for (int i = 0; i < Model.Count(); i++)
+        {
                 <tr>
-                    <th>Film</th>
-                    <th>Ilosc</th>
-                    <th>Wartosc</th>
+                    <th scope="row">@(i + 1)</th>
+                    <td>@Model.ElementAt(i).Film.Tytul</td>
+                    <td>@Model.ElementAt(i).Ilosc</td>
+                    <td>@Model.ElementAt(i).Wartosc</td>
+                            <td><a href="@Url.Action("Usun","Koszyk", new {id = Model.ElementAt(i).Film.Id})">Usun</a></td>
                 </tr>
+        }
+            <tr>
+                <td colspan="5">
+                    Cena: @ViewBag.CalaSuma zł
+                </td>
+            </tr>
+    }
+    else
+    {
+            <div>
+                Brak elementow w koszyku
+            </div>
+    }
 
+</table>
 
-            @foreach (var koszyk in Model)
-            {
+@section Scripts {
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script type="text/javascript">
+            $(".trash").click(function () {
+                var id = $(this).data("id");
 
-                        <tr>
-                            <td>@koszyk.Film.Tytul</td>
-                            <td>@koszyk.Ilosc</td>
-                            <td>@koszyk.Wartosc zł</td>
-                            <td>
-                                <form asp-controller="Koszyk" asp-action="Usun" method="post">
-                                    <input type="hidden" name="id" value="@koszyk.Film.Id" />
-                                    <button type="submit">Usuń</button>
-                                </form>
-                             </td>
-                        </tr>
-
-            }
-            </table>
-            suma: @ViewBag.CalaSuma
-        </div>
-}
-else
-{
-        <div>Koszyk jest pusty</div>
+                if(idFilmu != ''){
+                        $.post("./Koszyk/Usun", { id: idFilmu }, function (response) {
+                    if(response.ilosc == 0){
+                        $("#KosztkRz-"+response.Id)fadeOut("slow");
+                    }
+                    else{
+                        $("#element-"+response.Id).text(response.ilosc);
+                    }
+                });
+                }
+            });
+            </script>
 }

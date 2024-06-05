@@ -21,8 +21,13 @@
         <a href="@Url.Action("StronyStatyczne","Home",new{nazwa = "MetodyPlatnosci"})">Metody płatności</a>
         <a href="@Url.Action("StronyStatyczne","Home",new{nazwa = "Kontakt"})">Kontakt</a>
         <a href="@Url.Action("StronyStatyczne","Home",new{nazwa = "Regulamin"})">Regulamin</a>
+        <a href="@Url.Action("Register","Account")">Rejestracja</a>
+        <a href="@Url.Action("Login","Account")">Logowanie</a>
+
+
+        
 </footer>
 
-
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
